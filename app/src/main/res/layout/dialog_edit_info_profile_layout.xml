@@ -229,17 +229,7 @@ android:layout_gravity="center"
         android:text="ذخیره"
         android:textColor="#fff" />
 
-    <Button
-        android:id="@+id/btn_update_profile"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_80sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginEnd="@dimen/_80sdp"
-        android:layout_marginBottom="@dimen/_5sdp"
-        android:background="@drawable/bg_btn_save"
-        android:text="به روز رسانی اطلاعات"
-        android:textColor="#fff" />
+
 
     <Button
         android:id="@+id/btn_delete_profile"
@@ -253,17 +243,7 @@ android:layout_gravity="center"
         android:text="حذف اطلاعات"
         android:textColor="#fff" />
 
-    <Button
-        android:id="@+id/btn_show"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/_80sdp"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginEnd="@dimen/_80sdp"
-        android:layout_marginBottom="@dimen/_5sdp"
-        android:background="@drawable/bg_btn_save"
-        android:text="نمایش اطلاعات"
-        android:textColor="#fff" />
+
 
 </LinearLayout>
 

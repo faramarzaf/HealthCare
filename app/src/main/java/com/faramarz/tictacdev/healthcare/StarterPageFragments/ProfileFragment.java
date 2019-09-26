@@ -1,8 +1,10 @@
 package com.faramarz.tictacdev.healthcare.StarterPageFragments;
 
 import android.Manifest;
+import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 
 import androidx.annotation.Nullable;
@@ -43,8 +45,27 @@ import pl.aprilapps.easyphotopicker.EasyImage;
 
 public class ProfileFragment extends Fragment implements View.OnClickListener {
 
+    public static final String MyPREFERENCES = "MyPrefs";
+    public static final String Name = "nameKey";
+    public static final String Gender = "genderKey";
+    public static final String Age = "ageKey";
+    public static final String Weight = "weightKey";
+    public static final String Height = "heightKey";
+
+
     @BindView(R.id.txt_change_avatar)
     TextView txt_change_avatar;
+
+    @BindView(R.id.txt_name)
+    TextView txt_name;
+    @BindView(R.id.txt_sex)
+    TextView txt_sex;
+    @BindView(R.id.txt_age)
+    TextView txt_age;
+    @BindView(R.id.txt_height)
+    TextView txt_height;
+    @BindView(R.id.txt_weight)
+    TextView txt_weight;
     @BindView(R.id.avatar)
     RoundedImageView avatar;
     @BindView(R.id.edit_profile_info)
@@ -59,8 +80,30 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         ButterKnife.bind(this, view);
 
+        SharedPreferences preferences = this.getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
+
+        String name  = preferences.getString(Name,"");
+        String gender  = preferences.getString(Gender,"");
+
+        int  age=  preferences.getInt(Age,0);
+        int height=  preferences.getInt(Height,0);
+        int weight=  preferences.getInt(Weight,0);
+
+      /*  int weight=  preferences.getInt(String.valueOf(Weight),20);
+        int height=  preferences.getInt(String.valueOf(Height),60);
+*/
+        txt_name.setText(name);
+        txt_sex.setText(gender);
+        txt_age.setText(String.valueOf(age));
+        txt_height.setText(String.valueOf(height));
+        txt_weight.setText(String.valueOf(weight));
+
+
         txt_change_avatar.setOnClickListener(this);
         edit_profile_info.setOnClickListener(this);
+
+
+
         return view;
 
     }
@@ -87,6 +130,7 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
     private void showAlertDialog() {
         CustomEditInfoProfileDialog customEditInfoProfileDialog = new CustomEditInfoProfileDialog();
         customEditInfoProfileDialog.show(getFragmentManager(), "CustomEditInfoProfileDialog");
+
     }
 
 
