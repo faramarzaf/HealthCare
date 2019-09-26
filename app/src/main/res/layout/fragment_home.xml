@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".StarterPageFragments.HomeFragment">
+
+
+<FrameLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/fragment_home"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+
+            >
+
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_76sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_cardview"
+                android:drawableTop="@drawable/ic_daroo"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="مدیریت دارو"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/txt_color_main" />
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_76sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_cardview"
+                android:drawableTop="@drawable/ic_parvande_24dp"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="پرونده پزشکی"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/txt_color_main" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+
+            >
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_76sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_cardview"
+                android:drawableTop="@drawable/ic_taqzie_24dp"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="مدیریت تغذیه"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/txt_color_main" />
+
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_76sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_cardview"
+                android:drawableTop="@drawable/ic_stress_24dp"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="مدیریت استرس"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/txt_color_main" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_76sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_cardview"
+                android:drawableTop="@drawable/ic_no_smoking_24dp"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="مدیریت ترک سیگار"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/txt_color_main" />
+
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_76sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_cardview"
+                android:drawableTop="@drawable/ic_varzesh_24dp"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="مدیریت فعالیت بدنی"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/txt_color_main" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView7"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_76sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_cardview"
+                android:drawableTop="@drawable/ic_reminder_24dp"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="یادآور ویزیت پزشک"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/txt_color_main" />
+
+
+            <TextView
+                android:id="@+id/textView8"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/_76sdp"
+                android:layout_gravity="center"
+                android:layout_margin="@dimen/_8sdp"
+                android:layout_weight="1"
+                android:background="@drawable/bg_cardview"
+                android:drawableTop="@drawable/ic_amoozeshi_24dp"
+                android:gravity="center"
+                android:padding="@dimen/_5sdp"
+                android:text="مطالب آموزشی"
+                android:textAppearance="?android:attr/textAppearanceMedium"
+                android:textColor="@color/txt_color_main" />
+
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</FrameLayout>
+
+</FrameLayout>

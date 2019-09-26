@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Health Care</string>
+
+
+    <string name="myprofile">پروفایل</string>
+    <string name="settings">تنظیمات</string>
+    <string name="home">صفحه اصلی</string>
+
+
+</resources>
