@@ -39,7 +39,6 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
     public static final String Weight = "weightKey";
     public static final String Height = "heightKey";
 
-    public static final String imagePreferance = "image";
 
     @BindView(R.id.txt_change_avatar)
     TextView txt_change_avatar;
