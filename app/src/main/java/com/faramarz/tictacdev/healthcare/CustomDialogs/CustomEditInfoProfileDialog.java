@@ -20,8 +20,6 @@ import androidx.fragment.app.DialogFragment;
 
 import com.faramarz.tictacdev.healthcare.R;
 import com.faramarz.tictacdev.healthcare.StartPageActivity;
-import com.faramarz.tictacdev.healthcare.StarterPageFragments.HomeFragment;
-import com.faramarz.tictacdev.healthcare.main_categories.ManageDaruActivity;
 
 import butterknife.BindView;
 import butterknife.ButterKnife;
@@ -63,19 +61,14 @@ public class CustomEditInfoProfileDialog extends DialogFragment implements View.
         //   Realm.init(getContext());
         SharedPreferences preferences = this.getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
 
-        if (preferences.contains(Name)){
-            txt_userName.setText(preferences.getString(Name,null));
-        }else if (preferences.contains(Gender)){
-
-        }else if (preferences.contains(Age)){
-            numberPicker_age.setValue(preferences.getInt(Age,0));
-        }else if (preferences.contains(Weight)){
-            numberPicker_weight.setValue(preferences.getInt(Weight,0));
-        }if (preferences.contains(Height)){
-            numberPicker_height.setValue(preferences.getInt(Height,0));
+        if (preferences.contains(Name) && preferences.contains(Gender) && preferences.contains(Age) && preferences.contains(Weight)
+                && preferences.contains(Height)) {
+            txt_userName.setText(preferences.getString(Name, null));
+            //gender
+            numberPicker_age.setValue(preferences.getInt(Age, 0));
+            numberPicker_weight.setValue(preferences.getInt(Weight, 0));
+            numberPicker_height.setValue(preferences.getInt(Height, 0));
         }
-
-
 
         setNumberPickers();
         initNumberPickers();
@@ -143,7 +136,6 @@ public class CustomEditInfoProfileDialog extends DialogFragment implements View.
     public void onClick(View v) {
         int id = v.getId();
 
-
         switch (id) {
             case R.id.btn_save_profile:
 
@@ -174,14 +166,10 @@ public class CustomEditInfoProfileDialog extends DialogFragment implements View.
                     Toast.makeText(getActivity(), "اطلاعات با موفقیت ثبت شد", Toast.LENGTH_SHORT).show();
                 }
 
-
                 break;
 
             case R.id.btn_delete_profile:
-
                 dismiss();
-
-
         }
 
     }

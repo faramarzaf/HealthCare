@@ -6,38 +6,25 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
-
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
-import androidx.fragment.app.FragmentManager;
-import androidx.fragment.app.FragmentTransaction;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.NumberPicker;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
-
 import com.bumptech.glide.Glide;
 import com.faramarz.tictacdev.healthcare.CustomDialogs.CustomEditInfoProfileDialog;
 import com.faramarz.tictacdev.healthcare.R;
-import com.google.android.material.bottomnavigation.BottomNavigationView;
 import com.karumi.dexter.Dexter;
 import com.karumi.dexter.MultiplePermissionsReport;
 import com.karumi.dexter.PermissionToken;
 import com.karumi.dexter.listener.PermissionRequest;
 import com.karumi.dexter.listener.multi.MultiplePermissionsListener;
 import com.makeramen.roundedimageview.RoundedImageView;
-
 import java.io.File;
 import java.util.List;
-
 import butterknife.BindView;
 import butterknife.ButterKnife;
 import pl.aprilapps.easyphotopicker.DefaultCallback;
@@ -52,10 +39,10 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
     public static final String Weight = "weightKey";
     public static final String Height = "heightKey";
 
+    public static final String imagePreferance = "image";
 
     @BindView(R.id.txt_change_avatar)
     TextView txt_change_avatar;
-
     @BindView(R.id.txt_name)
     TextView txt_name;
     @BindView(R.id.txt_sex)
@@ -79,19 +66,14 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_profile, container, false);
         ButterKnife.bind(this, view);
-
         SharedPreferences preferences = this.getActivity().getSharedPreferences(MyPREFERENCES, Context.MODE_PRIVATE);
 
-        String name  = preferences.getString(Name,"");
-        String gender  = preferences.getString(Gender,"");
+        String name = preferences.getString(Name, "");
+        String gender = preferences.getString(Gender, "");
+        int age = preferences.getInt(Age, 0);
+        int height = preferences.getInt(Height, 0);
+        int weight = preferences.getInt(Weight, 0);
 
-        int  age=  preferences.getInt(Age,0);
-        int height=  preferences.getInt(Height,0);
-        int weight=  preferences.getInt(Weight,0);
-
-      /*  int weight=  preferences.getInt(String.valueOf(Weight),20);
-        int height=  preferences.getInt(String.valueOf(Height),60);
-*/
         txt_name.setText(name);
         txt_sex.setText(gender);
         txt_age.setText(String.valueOf(age));
@@ -101,7 +83,6 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
 
         txt_change_avatar.setOnClickListener(this);
         edit_profile_info.setOnClickListener(this);
-
 
 
         return view;
@@ -127,12 +108,12 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
         }
 
     }
+
     private void showAlertDialog() {
         CustomEditInfoProfileDialog customEditInfoProfileDialog = new CustomEditInfoProfileDialog();
         customEditInfoProfileDialog.show(getFragmentManager(), "CustomEditInfoProfileDialog");
 
     }
-
 
 
     public void showImagePickDialog(View view) {
@@ -195,7 +176,6 @@ public class ProfileFragment extends Fragment implements View.OnClickListener {
 
         });
     }
-
 
 }
 
